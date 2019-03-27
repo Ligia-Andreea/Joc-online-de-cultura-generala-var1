@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Joc (online) de cultura generala</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="java.js"></script><script type="text/javascript">
+
+var rand = [                   
+	["Ion Creangă este considerat unul dintre scriitorii clasici cei mai importanți ai literaturii române. Opera considerată de critici ca fiind capodopera lui Creangă scrisă de-a lungul mai multor ani (1881-1888) este:",'lit1.jpg','3',"a) Povești și povestiri", "b) Harap-Alb", "c) Amintiri din copilărie", "d) Principatul Moldovei"],
+	["În câte capitole este structurată opera <q>Amintiri din copilărie</q>?",'lit2.jpg','2',"a) 10", "b) 4", "c) 2", "d) 8"],
+	["Ion Creangă este recunoscut pentru măestria basmelor, poveștilor și povestirilor sale. <q>Capra cu trei iezi</q>, <q>Povestea lui Harap-Alb</q>, <q>Punguța cu doi bani</q>, <q>Fata babei și fata moșneagului</q> sunt câteva povești adunate în opera literară intitulată:",'std.jpg','1',"a) Povești", "b) Povestea poveștilor", "c) Povestiri", "d) Fragment de autobiografie"],
+	["Mihai Eminescu a fost poet, prozator și jurnalist român, fiind considerat de criticii literari cea mai importantă voce poetică a literaturii române. Singura operă apărută în timpul vieții sale la 21 decembrie 1883 este:",'lit4.jpg','2',"a) Critica rațiunii pure", "b) Poezii", "c) Teoriile lui Hegel", "d) Viața lui Inocențiu Micu"],
+	["Operele literare <q>Ion</q> și <q>Răscoala</q> sunt scrise de:",'std.jpg','4',"a) Camil Petrescu", "b) Mihail Sadoveanu", "c) Calistrat Hogaș", "d) Liviu Rebreanu"],
+	["<q>Pădurea spânzuraților</q>, roman scris de Liviu Rebreanu și publicat în 1992 este un roman de razboi și analiză psihologică ce se încadrează ca și curent literar în:",'lit6.jpg','3',"a) romantism", "b) clasicism", "c) realism", "d) tradiționalism"],
+	["Romanele <q>Neamul șoimăreștilor</q>, <q>Frații jderi</q> și <q>Zodia cancerului</q> au fost scrise de .....",'std.jpg','4',"a) George Călinescu", "b) Titu Maiorescu", "c) Nicolae Iorga", "d) Mihail Sadoveanu"],
+	["<q>Neamul șoimăreștilor</q>și <q>Frații jderi</q> scrise de Mihail Sadoveanu sunt romane inspirate din istoria medievală a:",'lit8.jpg','2',"a) Transilvaniei", "b) Moldovei", "c) Munteniei", "d) Banatului"],
+	["<q>Baltagul</q>, roman realist, traditional, mitic, publicat de Mihail Sadoveanu în 1930, are ca sursă de inspirație balada polulară:",'lit9.jpg','3',"a) Doina Tarcăului", "b) Iancu Jianu", "c) Miorița", "d) Cântec de leagăn"],
+	["Acțiunea romanului <q>Baltagul</q> se desfășoară în satul de munte Măgura Tarcăului din zona .....",'std.jpg','4',"a) Valea Jiului", "b) Valea Someșului", "c) Târnavelor", "d) Dornelor și a Bistriței"],
+	["I.L.Caragiale este cunoscut ca cel mai mare dramaturg român. Opera sa <q>D-l Goe</q> este o schiță publicată în volumul .....",'lit11.jpg','2',"a) Teatru", "b) Momente și schițe", "c) Pamflete", "d) Critică literară"],
+	["<q>O scrisoare pierdută</q> este o comedie de moravuri sociale și politice scrisă de dramaturgul I.L.Caragiale și publicată în anul 1884 în revista :",'lit12.jpg','2',"a) Junimea", "b) Convorbiri literare", "c) Sburătorul", "d) Viața românească"],
+	["George Coșbuc este poet, critic literar și membru al Academiei Române în 1916. Scrie prima poezie pe care o și pierde la vârsta de:",'lit13.jpg','3',"a) 10 ani", "b) 18 ani", "c) 15 ani", "d) 17 ani"],
+	["Poeziile <q>Nebuna</q>, <q>Țiganii</q>, <q>Numai una</q>, <q>Mama</q> și <q>Dușmancele</q> au fost scrise de .....",'std.jpg','1',"a) George Coșbuc", "b) Mihai Eminescu", "c) Octavian Goga", "d) Lucian Blaga"],
+	["Versurile: <q>Nu e soare, dar e bine/Și pe râu e numai fum/Vântu-i liniștit acum,...</q> aparțin poeziei:",'std.jpg','4',"a) <q>Iarna</q> – Vasile Alecsandri", "b) <q>Testament</q> – Tudor Arghezi", "c) <q>Cântecul copilăriei</q> – Nicu Alifantis", "d) <q>Iarna pe uliță</q> – George Coșbuc"],
+	["Volumul de poezii <q>Prisaca</q> publicat în 1954 a fost scris de:",'std.jpg','4',"a) Ștefan Octavian Iosif", "b) Veronica Nicle", "c) Vasile Alecsandri", "d) Tudor Arghezi"],
+	["Versurile <q>Că niciuna n-a muncit/Pentru sine, ci-mpreună</q> aparțin poeziei .....",'std.jpg','4',"a) <q>Flori de mucigai</q>", "b) <q>Iscoada</q>", "c) <q>Tâlharul pedepsit</q>", "d) <q>Stupul lor</q>"],
+	["Stendhal este scriitor francez ,renumit pentru finețea analizei sentimentelor personajelor sale, moare în 1842 după ce termină ultima sa capodoperă intitulată:",'lit18.jpg','1',"a) <q>Mănăstirea din Parma</q>", "b) <q>Roșu și negru</q>", "c) <q>Armance</q>", "d) <q>Vanina Vanini</q>"],
+	["Honoré de Balzac a creat un adevărat monument literar în a cărui componență intră 95 de lucrări terminate (nuvele, romane, eseuri) și 48 de lucrări neterminate. Acest ciclu se numește .....",'lit19.jpg','2',"a) <q>Sarrasine</q>", "b) <q>Comedia umană</q>", "c) <q>Gobseck</q>", "d) <q>Pacea căsniciei</q>"],
+	["Alexandre Dumas, prin romanele sale de aventuri istorice, a devenit cel mai popular scriitor francez din lume. Cel mai popular roman care descrie aventuri și intrigi în jurul regelui Ludovic al XVIII-lea și al puternicului Cardinal Richelieu este:",'lit20.jpg','4',"a) <q>Masca de fier</q>", "b) <q>Vicontele de Bragelone</q>", "c) <q>Colierul reginei</q>", "d) <q>Cei trei mușchetari</q>"],
+	["William Shakespeare este considerat cel mai mare scriitor al literaturii de limbă engleza. Cele mai strălucite tragedii scrise de acesta sunt: <q>Regele Lear</q>, <q>Macbeth</q> și .....",'lit21.jpg','1',"a) <q>Hamlet</q>", "b) <q>Regele Ioan</q>", "c) <q>Richard al III-lea</q>", "d) <q>Îmblânzirea scorpiei</q>"],
+	["Thomas Mann, romancier și eseist german a fost laureat al Premiului Nobel pentru literature în 1929 pentru romanul .....",'lit22.jpg','1',"a) <q>Casa Buddenbrook</q>", "b) <q>Dulapul de haine</q>", "c) <q>Micul domn Friedmann</q>", "d) <q>Moartea la Veneția</q>"]  ,
+	["Întemeietorul statului dac prin unificarea ținuturilor locuite de geto-daci a fost:",'std.jpg','2',"a) Decebal", "b) Burebista", "c) Deceneu", "d) Strabon"],
+	["Între anii 85-106 regele Daciei a fost .....",'std.jpg','3',"a) Burebista", "b) Traian", "c) Decebal", "d) Dio Cassius"],
+	["În timpul lui Mircea cel Bătrân Țara Românească ajunge la cea mai mare întindere teritorială din istoria sa, având capitala stabilită la:",'ist3.jpg','1',"a) Curtea de Argeș", "b) Târgoviște", "c) Alba-Iulia", "d) Sibiu"],
+	["La 17 mai 1395 Mircea cel Bătrân și micuța sa armată învinge oastea numeroasă a lui Baiazid într-un loc mlăștinos și împădurit numit .....",'std.jpg','2',"a) Nicopole", "b) Rovine", "c) Cozia", "d) Porțile de Fier"],
+	["Vlad Țepeș a domnit în Țara Românească între anii 1456-1462 și 1476 și a fost denumit de către străini:",'ist5.jpg','4',"a) Gorunul", "b) Dragonul", "c) Cavaler de Malta", "d) Dracula"],
+	["Vlad Țepeș a luat pentru prima dată domnia Țării Românești la varsta de .....",'std.jpg','2',"a) 30 ani", "b) 17 ani", "c) 45 ani", "d) 23 ani"],
+	["Ștefan cel Mare, personalitate marcantă a istoriei României a avut cea mai lungă domnie din Epoca Medievală a Țărilor Române. Cât a durat?",'ist7.jpg','3',"a) 34 ani", "b) 15 ani", "c) 47 ani", "d) 53 ani"],
+	["În anul 1475, la 10 ianuarie, Ștefan cel Mare îl zdrobește pe Soliman Pașa și numeroasa lui oaste în bătălia de la .....",'std.jpg','2',"a) Nicopole", "b) Vaslui", "c) Chilia", "d) Războieni"],
+	["Primul domnitor al Principatelor Unite, Alexandru Ioan Cuza, a fost ales la 5 ianuarie 1859 domn al Moldovei și al Țării Românești la data de:",'ist9.png','2',"a) 15 ianuarie 1859", "b) 24 ianuarie 1859", "c) 1 ianuarie 1859", "d) 27 ianuarie 1859"],
+	["În primăvara anului 1821 Tudor Vladimirescu preia conducerea Țării Românești, având drept scop înlăturarea regimului fanariot. El este ucis în urma unui complot al eteriștilor la:",'ist10.jpg','3',"a) București", "b) Golești", "c) Târgoviște", "d) Curtea de Argeș"],
+	["Mihai Viteazul, înainte de a deveni voievod al Țării Românești, a fost mai întâi ban al:",'ist11.jpg','2',"a) Târgoviștei", "b) Craiovei", "c) Banatului", "d) Moldovei"],
+	["Mihai Viteazul a fost domnitorul Țării Românești între anii:",'std.jpg','1',"a) 1593-1600", "b) 1586-1601", "c) 1586-1607", "d) 1593-1601"],
+	["Pentru o scurtă perioadă, Mihai Viteazul a fost domn al celor trei mari țări medievale care astăzi formează România. Aceasta se întâmpla în anul .....",'std.jpg','4',"a) 1593", "b) 1597", "c) 1570", "d) 1600"],
+	["Primul Război Mondial a avut loc între anii:",'std.jpg','1',"a) 1914-1918", "b) 1913-1921", "c) 1914-1916", "d) 1916-1918"],
+	["Asasinarea la Sarajevo a moștenitorului tronului Austro-Ungar a fost pretext pentru:",'std.jpg','4',"a) încetarea Primului Război Mondial", "b) extinderea imperialismului Austro-Ungar", "c) Destrămarea Imperiului Rus", "d) Izbucnirea Primului Război Mondial"],
+	["Cele două blocuri agresive imperialiste ale Primului Război Mondial erau Puterile Centrale și .....",'std.jpg','1',"a) Antanta", "b) Alianța Europei Centrale", "c) Blocul Austro-Ungar", "d) Imperiul Rus"],
+	["În urma convenției de la 4 august1916, România iese din starea de neutralitate și intră în război de partea Antantei cu scopul:",'ist17.jpg','2',"a) de a recupera tezaurul românesc", "b) de a recupera teritoriile istorice Banat, Bucovina, Transilvania", "c) de a ceda Transilvania și Bucovina", "d) de a ceda Dobrogea"],
+	["Al Doilea Război Mondial s-a desfășurat între anii .....",'std.jpg','1',"a) 1939-1945", "b) 1932-1939", "c) 1934-1939", "d) 1936-1945"],
+	["Creșterea naționalismului, a militarismului, existența multor probleme teritoriale rămase nerezolvate după Primul Război Mondial, apariția multor mișcări fasciste și instabilitatea economică au fost cauzele izbucnirii .....",'ist19.png','4',"a) Războiului Imperialist Rus", "b) Războiului Imperialist Francez", "c) Războiului Austro-Ungar", "d) celui de-al doilea Război Mondial"],
+	["După cel de-al doilea Război Mondial, România recuperează nordul Transilvaniei, dar pierde .....",'std.jpg','3',"a) Oltenia", "b) Dobrogea", "c) Basarabia și nordul Bucovinei", "d) Banatul"],
+	["Regimul comunits durează în România între anii:",'std.jpg','2',"a) 1947-1991", "b) 1947-1989", "c) 1950-1989", "d) 1962-1999"],
+	["În perioada regimului comunist, România a fost cunoscută ca:",'std.jpg','1',"a) Republica Socialistă România", "b) Republica Națională Română", "c) Republica Comunistă Română", "d) Republica Principatelor Române"],
+	["Nicolae Ceaușescu a fost ales șef al Statului Român în anul:",'ist23.jpg','3',"a) 1965", "b) 1962", "c) 1967", "d) 1989"],
+	["Când a avut loc căderea regimului comunist în România?",'std.jpg','2',"a) 15 noiembrie 1989", "b) 22 decembrie 1989", "c) 10 decembrie 1989", "d) 22 decembrie 1998"]  ,
+	["Care sunt unitățile de memorie externă?",'std.jpg','3',"a) unitate de memorie, unitatea centrală de prelucrare, unități de intrare","b) unitate de memorie, unități de intrare-ieșire","c) unitate de hard disk, unitatea de floppy și unități optice","d) unitate de memorie, unitatea centrală de prelucrare, unități de intrare-ieșire"],
+	["Memoria internă este constituită din:",'std.jpg','1',"a) memorie RAM și memorie ROM","b) memorie internă și memorie externă","c) memorie de bază și memorie de aplicații","d) nu se clasifică"],
+	["Ce funcții îndeplinește procesorul?",'std.jpg','2',"a) de memorare și control","b) de prelucrare și de comandă și control","c) de intrare-ieșire","d) nu îndeplinește nici o funcție"],
+	["2 Gb înseamnă .....",'std.jpg','3',"a) 1024 Mb","b) 2024 Kb","c) 2048 Mb","d) 2^10 octeți"],
+	["Tasta ENTER într-un editor de text are funcția:",'std.jpg','2',"a) lasă spațiu între cuvinte","b) trece pe rândul următor","c) ne poziționează la începutul rândului","d) ne poziționează la sfârșitul rândului"],
+	["Imprimantele se clasifică în :",'std.jpg','4',"a) matriciale, cu jet de cerneală și A4","b) matriciale, A3 și A4","c) matriciale și laser","d) matriciale, cu jet de cerneală și laser"],
+	["Scannerul este un dispozitiv de:",'std.jpg','1',"a) intrare","b) intrare-ieșire","c) ieșire","d) memorare și intrare"],
+	["Cum se clasifică sistemele de operare?",'std.jpg','1',"a) de bază și de aplicații","b) grafice și pe bază de comenzi","c) pe bază de comenzi și de bază","d) grafice și de aplicații"],
+	["Cum se procedează pentru a restarta un calculator care are un sistem de operare Windows?",'std.jpg','2',"a) Start – Turn off","b) Start - Restart","c) Start - Hibernate","d) Start – Log off"],
+	["Ce aplicație conține toate documentele existente într-un calculator?",'std.jpg','4',"a) Control Panel","b) My Documents","c) Recycle Bin","d) My Computer"],
+	["Ce comandă se utilizează pentru a goli coșul de gunoi (Recycle Bin)?",'std.jpg','3',"a) Restore","b) Open","c) Empty","d) Cut"],
+	["Cum se deschide un obiect reprezentat de o icoană?",'std.jpg','1',"a) dublu click pe icoană","b) un singur click pe icoană","c) click dreapta pe icoană","d) click + Enter"],
+	["Pentru modificarea aspectului fundalului (background) cum procedați?",'std.jpg','2',"a) Click dreapta pe ecran – Properties – Screen Saver","b) Click dreapta pe ecran – Properties – Background","c) Click dreapta pe ecran – Properties – Desktop","d) Click dreapta pe ecran – Properties – Control Panel"],
+	["Ce comandă folosiți pentru a șterge o icoană de pe desktop?",'std.jpg','4',"a) Rename","b) Cut","c) Copy","d) Delete"],
+	["Care este cea mai mică unitate adresabilă de memorie?",'std.jpg','2',"a) KiloBit","b) Bit","c) Byte","d) KiloByte"],
+	["Câți byți sunt într-un 1KB?",'std.jpg','3',"a) 10240 byți","b) 10242 byți","c) 1024 byți","d) 1042 byți"],
+	["Memoria externă este reprezentată de:",'std.jpg','1',"a) hard-disk","b) memorie RAM","c) memorie ROM","d) placă video"],
+	["Ce reprezintă Intranetul?",'std.jpg','4',"a) rețea globală de rețele legate între ele","b) un sistem de operare Windows","c) un sistem de operare pentru rețele","d) rețea private a unei companii ce utilizează tehnologia Internet"],
+	["Un pixel (PictureElement) reprezintă .....",'std.jpg','1',"a) cel mai mic element al unei imagini digitale","b) pictură ","c) frecvența verticală de împrospătare a imaginii pe monitor","d) diagonala monitorului"],
+	["Cu ce tastă efectuăm ștergerea unui caracter dacă am poziționat cursorul în fața caracterului?",'std.jpg','3',"a) Backspace","b) Page Down","c) Delete","d) Page Up"],
+	["Care este opțiunea pentru schimbarea numelui unui fișier?",'std.jpg','2',"a) Move","b) Rename","c) Paste","d) Save"],
+	["Precizați care dintre următoarele extensii NU poate fi asociată corect unui fișier creat cu aplicația Paint.",'std.jpg','4',"a) bmp","b) gif","c) jpg","d) txt"]  ,
+	["România este situată în sud-estul Europei, având la sud si nord, ca vecini, Bulgaria și respectuv Ucraina, iar la est Republica Moldova și .....",'std.jpg','3',"a) Ungaria", "b) Polonia", "c) Marea Neagră", "d) Dunărea"],
+	["Pentru că 2/3 din lanțul carpatic se află pe teritoriul României, este considerată țară .....",'std.jpg','1',"a) carpatică", "b) mareică", "c) muntoasă", "d) deluroasă"],
+	["România are ieșire la Marea Neagră și întregul sector inferior al fluviului Dunărea se află pe teritoriul său la granița țării. Din aceste cauze țara noastră este și .....",'geo3.jpg','3',"a) țară agrară", "b) țară multilateral dezvoltată", "c) țară pontică și danubiană", "d) țară industrială"],
+	["Relieful României este caracterizat printr-o mare diversitate și complexitate având:",'geo4.jpg','4',"a) 50% munți, 30% câmpii, 20% podișuri", "b) 75% dealuri, 25% munți", "c) 22% vulcani, 28% câmpii, 40% munți", "d) 28% munți, 42% dealuri și podișuri, 30% câmpii"],
+	["Cel mai înalt vârf muntos din România este .....",'geo5.jpg','4',"a) Vârful Peleaga din Munții Retezat", "b) Vârful Negoiu din Munții Făgăraș", "c) Vârful Omu din Munții Bucegi", "d) Vârful Moldoveanu din Munții Făgăraș"],
+	["Munții Oaș-Gutâi-Țibleș sunt munți:",'std.jpg','1',"a) vulcanici", "b) formați prin încrețire", "c) formați prin depuneri sedimentare", "d) formați prin eroziune"],
+	["Lacurile Bâlea și Bucura sunt lacuri:",'geo7.jpg','2',"a) vulcanice", "b) glaciare", "c) formate prin alunecări de teren", "d) de apă sărată"],
+	["Stațiunea Geoagiu Băi este cunoscută din vremea dacilor și romanilor pentru efectele terapeutice datorate:",'std.jpg','1',"a) apelor termale", "b) apelor sărate", "c) apelor sulfuroase", "d) apelor minerale"],
+	["Lacul Iezer este un lac glaciar aflat în Munții Rodnei. El face parte din rezarvația naturală denumită:",'geo9.jpg','1',"a) Pietrosu Mare", "b) Retezat", "c) Rodnei", "d) Hațeg"],
+	["Al doilea fluviu ca mărime al Europei cu lungime de peste 2860km este .....",'std.jpg','3',"a) Tamisa", "b) Volga", "c) Dunărea", "d) Eufrat"],
+	["În anul 1990 Delta Dunării a fost declarată de Guvernul României .....",'geo11.jpg','1',"a) Rezervație a biosferei", "b) Rezervație de estuare", "c) Rezervație danubiană", "d) Rezervație naturală"],
+	["Carpații României se împart în:",'geo12.jpg','3',"a) Carpații Apuseni și Carpații Vulcanici", "b) Carpații Occidentali și Munții Alpi", "c) Carpații Orientali, Carpații Meridionali, Carpații Occidentali", "d) Carpații Rodnei, Carpații Banatului, Carpații Bihorului"],
+	["Cea mai mare parte a apelor curgătoare din România izvorăsc din:",'std.jpg','3',"a) dealuri", "b) podișuri", "c) Carpați", "d) deltă"],
+	["Apele curgătoare din România aparțin bazinului:",'std.jpg','1',"a) Dunării și Mării Negre", "b) Balcanic", "c) Crișurilor", "d) Târnavelor"],
+	["Marea Neagră se învecinează cu teritoriul continental al României, pe o distanță de 245km, formând .....",'std.jpg','3',"a) o deltă", "b) limane", "c) litoralul românesc", "d) partea acvatică a teritoriului românesc"],
+	["Vegetația alpină și subalpină formată din pajiști alpine și arbuști pitici se află .....",'std.jpg','4',"a) în zonele joase ale culmilor muntoase", "b) în zonele de câmpie", "c) în zonele de podișuri", "d) pe culmile muntoase mai înalte"],
+	["Pădurile de fag, gorun și stejar reprezintă vegetația specifică .....",'std.jpg','2',"a) vârfurilor muntoase", "b) dealurilor și podișurilor", "c) zonei de deltă și litoral", "d) Luncii Dunării"],
+	["Ce fel de climă are România?",'std.jpg','3',"a) mediteraneană", "b) subecuatorială", "c) temperat continentală de tranziție", "d) musonică"],
+	["Orașele transilvănene ca Sibiu, Brașov, Sighișoara, Cluj-Napoca au devenit puncte de atracție turistică datorită folclorului și tradițiilor, dar mai ales pentru .....",'std.jpg','4',"a) vegetația și lacurile din zonă", "b) climă", "c) grădinile zoologice", "d) castelele și atmosfera medievală"],
+	["Bucovina se remarcă printr-o zonă montană pitorească, tradiții populare nealterate și un număr mare de .....",'std.jpg','1',"a) mănăstiri", "b) rezervații", "c) castele", "d) lacuri"],
+	["Techirghiolul este cunoscut pentru .....",'geo21.jpg','1',"a) nămolurile negre și sulfuroase cu scop terapeutic", "b) salinele adânci și răcoroase", "c) emanații de hidrogen sulfurat", "d) minerale de izvor"],
+	["Salinele Târgu-Ocna, Slănic-Prahova, Slănic-Moldova sunt folosite ca:",'std.jpg','3',"a) baze de extracție a minereurilor neferoase", "b) turbe descompuse chimic", "c) baze de tratament", "d) baze sportive"]  ,
+	["Anthony Hopkins a avut în <q>Tacerea mieilor</q> rolul .....",'fil1.jpg','2',"a) procuror","b) Dr. Hannibal Lecter","c) Dr. Hamilton","d) avocat"],
+	["Rolul lui Don Diego de la Vega a fost jucat de Anthony Hopkins în filmul:",'fil2.jpg','3',"a)  Tăcerea mieilor","b) Maleficent","c) Masca lui Zoro","d) Mr. & Mrs. Smith"],
+	["În filmul </q>Meet Joe Black</q>(apărut în 1995), Anthony Hopkins , în rolul lui Bill Parish, joacă alături de actorul .....",'fil3.jpg','1',"a) Brad Pitt","b) Clark Kent","c) Leonardo DiCaprio","d) Sylvester Stallone"],
+	["În unul din ultimele sale filme, Angelina Jolie a jucat rolul ..... care a dat și numele filmului.",'std.jpg','4',"a) Smărăndița","b) Frumoasa din padurea adormită","c) Albă-ca-Zăpada ","d) Maleficent"],
+	["Julia Roberts a jucat rolul <q>Vivian Ward</q> în anul 1990 în filmul de mare succes:",'fil5.jpg','2',"a) Star Wars","b) Pretty woman","c) Home alone","d) Wolf"],
+	["Cine joacă în filmul <q>Sleeping with the enemy</q>(1991) în rolul Laurei Williams?",'std.jpg','2',"a) Melanie Griffith","b) Julia Roberts","c) Uma Thurman","d) Natalie Portman"],
+	["În seria filmelor <q>Star Wars</q> , ce rol are Natalie Portman?",'fil7.jpg','1',"a) Padmé Amidala","b) Leia Organa","c) Chewbacca","d) BB-8"],
+	["În filmul <q>Black Swan</q> lansat în anul 2010, rolul <q>Nina Sayers</q>, joacă actrița:",'fil8.jpg','4',"a) Julianne Moore","b) Susan Sarandon","c) Meryl Streep","d) Natalie Portman"],
+	["Rolul <q>Dumnezeu</q>/</q>cerșetor</q> a fost jucat în anul 2003 în filmul <q>Bruce Almightiy</q> de actorul......",'fil9.jpg','2',"a) George Clooney","b) Morgan Freeman","c) Brad Pitt","d) Nicolas Cage"],
+	["Morgan Freeman joacă rolul <q>Sloan</q> în filmul:'fil10.jpg',",'1',"a) Wanted","b) Titanic","c) Hachiko","d)That’s my boy"],
+	["<q>Wolf </q> este film lansat în anul 1994. Cine joacă în rolul lui Will Randall?",'std.jpg','1',"a) Jack Nicholson","b) Florin Piersic","c) Kit Harington","d) Sean Penn"],
+	["În filmul <q>Between friends</q> , Elizabeth Taylor a primit nominalizare pentru cea mai bună actriță într-un rol dramatic. Rolul jucat a fost:",'std.jpg','3',"a) Rose DeWitt Bukater","b) Gloria","c) Deborah Shapiro","d) Vivian Ward"],
+	["<q>Butterfield 8</q> i-a adus actriței Elizabeth Taylor în anul 1960 premiul academiei pentru .....",'std.jpg','4',"a) rol secundar","b) cea mai bună gospodină","c) cel mai bun rol dramatic","d) cea mai bună actriță"],
+	["Filmul <q>The lion in winter</q> a apărut în anul 1968. Cine a jucat în rolul <q>Queen Eleanor</q> pentru care primește premiul academiei?",'fil14.jpg','4',"a) Bette Davis","b) Diane Keaton","c) Grace Kelly","d) Katharine Hepburn"],
+	["În ce film a jucat Katharine Hepburn în 1981, rolul <q>Ethel Thayer</q>?",'fil15.jpg','2',"a) Revenant","b) On golden pond","c) After Earth","d) Star Wars"],
+	["În ce an a jucat Leonardo DiCaprio în rolul lui Jack Dawson, filmul <q>Titanic</q>?",'fil16.jpg','1',"a) 1997","b) 1990","c) 2003","d)1987"],
+	["Oscarul pentru cel mai bun actor internațional a fost caștigat în anul 2015 de actorul Leonardo DiCaprio în rolul lui Hugh Glass din filmul.....",'fil17.jpg','1',"a) The Revenant","b) Titanic","c) Giant","d) Butterfield 8"],
+	["<q>Hachiko</q> lansat în 2009 l-a avut distribuit în rolul <q>Parker Wilson</q> pe actorul:",'fil18.jpg','3',"a) Victor Rebengiuc","b) Will Smith","c) Richard Gere","d) Morgan Freeman"],
+	["Ce rol a jucat Travis Fimmel în serialul <q>Vikings</q>?",'fil19.jpg','4',"a) Rollo","b) Bjorn Ironside","c)  Floki","d) Ragnar Lothbrok"],
+	["În ce an a apărut filmul <q>Warcraft</q> în care Travis Fimmel joacă rolul lui Anduin Lothar?",'fil20.jpg','1',"a) 2016","b) 2010","c) 2013","d) 2015"],
+	["Cine joacă în rolul lui Inmate Grecul din filmul <q>Cel mai iubit dintre pământeni</q> lansat în 1993?",'fil21.jpg','2',"a) Florin Zamfirescu","b) Mircea Albulescu","c) Gheorghe Dinică","d) Richard Gere"],
+	["În 1987 Victor Rebengiuc joacă în filmul <q>Moromeții</q> , rolul.....",'fil22.jpg','4',"a) Niculae Moromete","b) Iocan","c) Tudor Bălosu","d) Ilie Moromete"],
+	["În ce film joacă Manuela Hărăbor , rolul Siminei (1987)?",'fil23.jpg','2',"a) Baltagul","b) Pădureanca","c) Pintea","d) Ultima noapte de dragoste"],
+	["Cum se numește actorul care joacă în filmul <q>After Earth</q> (2013) împreună cu fiul său?",'fil24.jpg','1',"a) Will Smith","b) Johnny Depp","c) Al Pacino","d) Dustin Hoffman"],
+	["Rolul Margaretei Aldea este jucat de Maria Ploae în anul 1986 în filmul ....",'fil25.jpg','4',"a) Drumul oaselor","b) Un comisar acuză","c) Păcală","d) Cuibul de viespi"],
+	["În filmul <q>Ciulinii Bărăganului</q> (1958),  în rolul lui Tănase joacă actorul....",'fil26.jpg','3',"a) Constantin Diplan","b) Marin Moraru","c) Florin Piersic","d) Toma Caragiu"]  ,
+	["Câte planete are Sistemul Solar?",'unv1.jpg','3',"a) 10","b) 9","c) 8","d) 11"],
+	["Care este a doua planetă de la Soare?",'std.jpg','4',"a) Mercur","b) Jupiter","c) Pământ","d) Venus"],
+	["Între ce planete se află centura de meteoriți?",'unv3.jpg','2',"a) Între Venus și Mercur","b) Între Marte și Jupiter","c) Între Jupiter și Saturn","d) Între Uranus și Saturn"],
+	["Ce planetă este numită Planeta Roșie? ",'unv4.jpg','4',"a) Mercur","b) Venus","c) Jupiter","d) Marte"],
+	["Care sunt planetele vecine Pământului?",'std.jpg','2',"a) Jupiter și Marte","b) Venus și Marte","c) Mercur și Venus","d) Uranus și Venus"],
+	["Ce planetă este denumită popular Luceafărul?",'unv6.jpg','2',"a) Marte","b) Venus","c) Jupiter","d) Soarele"],
+	["Care este cea mai apropiată planetă de Soare?",'std.jpg','1',"a) Mercur","b) Venus","c) Neptun","d) Pământ"],
+	["Care este singura planetă care se învârte invers în jurul Soarelui?",'std.jpg','3',"a) Marte","b) Uranus","c) Venus","d) Jupiter"],
+	["Care este planeta care are cele mai multe inele în jurul ei?",'unv9.jpg','1',"a) Saturn","b) Jupiter","c) Pământ","d) Neptun"],
+	["Câți sateliți naturali are Pământul?",'std.jpg','4',"a) 3","b) 2","c) 5","d) 1"],
+	["Care este cel mai masiv obiect din Sistem?",'std.jpg','4',"a) Jupiter","b) Saturn","c) Pământul","d) Soarele"],
+	["Cum sunt denumite Uranus și Neptun?",'std.jpg','3',"a) planete terestre","b) giganți gazoși","c) giganți de gheață","d) planete roșii"],
+	["Din ce este compus Soarele?",'unv13.jpg','1',"a) hidrogen și heliu","b) gheață","c) aer","d) roci și metal"],
+	["Care este singura planetă cu plăci tectonice?",'std.jpg','3',"a) Marte ","b) Mercur","c) Terra","d) Saturn"],
+	["Care este cel mai mare asteroid din Sistemul Solar?",'unv15.jpg','1',"a) Ceres","b) Hilda","c) Europa","d) Luceafărul"],
+	["Când s-a format Sistemul Solar?",'unv16.jpg','2',"a) acum 10 miliarde de ani","b) acum 4,6 miliarde de ani","c) acum 1 miliard de ani","d) acum 7,3 miliarde de ani"],
+	["Cum se numesc planetele Mercur, Venus, Pământ și Marte?",'std.jpg','1',"a) planete terestre","b) giganți gazoși","c) giganți de gheață","d) planete roșii"],
+	["Care este cea mai mare planetă din sistemul solar?",'unv18.jpg','4',"a) Uranus","b) Marte","c) Terra","d) Jupiter"],
+	["Care dintre următoarele planete nu are inele?",'std.jpg','3',"a) Jupiter","b) Saturn","c) Marte ","d) Neptun"],
+	["Cât timp îi ia Pământului să facă un tur complet pe orbită, în jurul Soarelui?",'unv20.jpg','2',"a) 5 ani","b) 365 de zile","c) 100 de zile","d) 459 de zile"],
+	["Soarele este .....",'std.jpg','1',"a) o stea","b) o planetă","c) o cometă","d) un meteorit"],
+	["Poţi forma numele unei planete din următoarele litere? N S U R A U",'unv22.jpg','3',"a) Saturn","b) Rusanu","c) Uranus","d) Neptun"],
+	["Care este cea mai îndepărtată planetă faţă de Soare?",'unv23.jpg','4',"a) Mercur","b) Uranus","c) Terra","d) Neptun"],
+	["Care este cea mai mică planetă din sistemul solar?",'std.jpg','1',"a) Mercur","b) Venus","c) Terra","d) Marte"],
+	["Care este cea mai apropiată planetă de Pământ?",'std.jpg','2',"a) Mercur","b) Venus","c) Jupiter","d) Marte"],
+	["Care este planeta cu cei mai mulți sateliți?",'unv26.jpg','4',"a) Terra","b) Saturn","c) Neptun","d) Jupiter"],
+	["Pluto este considerată o planetă?",'std.jpg','1',"a) nu","b) da","c) este o cometă","d) este o formațiune gazoasă"]  // Note: no comma after last entry
+];
+var qNo = 0;
+var correct = 0;
+
+function resetRBtn(GrpName) {
+  var sel = document.getElementsByName(GrpName);
+  for (var i=0; i<sel.length; i++) { sel[i].checked = false; }
+}
+function getRBtnName(GrpName) {
+  var sel = document.getElementsByName(GrpName);
+  var fnd = -1;
+  var str = '';
+  for (var i=0; i<sel.length; i++) {
+    if (sel[i].checked == true) { str = sel[i].value;  fnd = i; }
+  }
+//  return fnd;   // return option index of selection
+// comment out next line if option index used in line above  
+  return str;
+} 
+
+function NextQuestion() {
+var i;
+for (i=1; i<=10; i++)
+{
+    var a;
+	if (i <= 10) { 
+    a=Math.floor(Math.random() * 144);
+	qNo=a;
+	document.getElementById("des").innerHTML = rand[a+1][0];
+	document.getElementById("rasp1").innerHTML = rand[a+1][3];
+	document.getElementById("rasp2").innerHTML = rand[a+1][4];
+	document.getElementById("rasp3").innerHTML = rand[a+1][5];
+	document.getElementById("rasp4").innerHTML = rand[a+1][6];
+
+  var ans = getRBtnName('ans');
+  if ((qNo < rand.length) && (ans == rand[qNo][2])) { correct++; }
+  resetRBtn('ans');
+  
+  if (qNo < rand.length) {
+    qNo++;
+  } else {
+    alert('You had '+correct+' correct answers\n\nQuiz is done');
+	return;
+  }
+  
+  if (qNo < rand.length) { document.getElementById('Pic').src = rand[qNo][1]; }
+					     else { alert('You had '+correct+' correct answers'); }
+}
+}
+}
+onload = function() { document.getElementById('Pic').src = rand[0][1]; 
+document.getElementById("des").innerHTML = rand[0][0];
+document.getElementById("rasp1").innerHTML = rand[0][3];
+document.getElementById("rasp2").innerHTML = rand[0][4];
+document.getElementById("rasp3").innerHTML = rand[0][5];
+document.getElementById("rasp4").innerHTML = rand[0][6];
+}
+
+</script>
+  
+</head>
+
+<body>
+  <nav class="nav">
+  <div class="burger">
+    <div class="burger__patty"></div>
+  </div>
+
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="#1" class="nav__link c-red"><i class="literatura"><img src="1.png" div id="Literatura" height="50" width="50"></i></a>
+	  
+    </li>
+    <li class="nav__item">
+      <a href="#2" class="nav__link c-yellow"><i class="istorie"><img src="2.png" alt="Istorie si personalitati istorice" height="50" width="50"></i></a>
+    </li>
+    <li class="nav__item">
+      <a href="#3" class="nav__link c-purple"><i class="informatica"><img src="3.png" alt="Informatica si tehnologia informatiei si a comunicarilor" height="50" width="50"></i></a>
+    </li>
+	<li class="nav__item">
+      <a href="#4" class="nav__link c-blue"><i class="geografie"><img src="4.png" alt="Geografie" height="50" width="50"></i></a>
+    </li>
+	<li class="nav__item">
+      <a href="#5" class="nav__link c-green"><i class="filme"><img src="5.jpg" alt="Filme si personalitati cinematografice" height="50" width="50"></i></a>
+    </li>
+	<li class="nav__item">
+      <a href="#6" class="nav__link c-pink"><i class="univers"><img src="6.png" alt="Universul si Sistemul nostru Solar" height="50" width="50"></i></a>
+    </li>
+	<li class="nav__item">
+      <a href="#7" class="nav__link c-light-green"><i class="test"><img src="7.png" alt="Incepe testul" height="50" width="50"></i></a>
+    </li>
+  </ul>
+</nav>
+
+
+<section class="panel b-red" id="1">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="literatura"></i>&nbsp;Literatura</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Termenul de "literatură" are diverse sensuri, în funcție de uzul acestuia. În linii mari, poate desemna orice înregistrare simbolică, cuprinzând totul de la imagini și sculpturi la scrisori. Un înțeles mai concentrat ar fi doar textul compus din litere sau simboluri precum hieroglifele egiptene.</p>
+	  <p>Având în vedere faptul că rădăcinile cele mai adânci ale literaturii române sunt în basme, legende și în creația folclorică, putem spune că literatura română s-a născut chiar înainte ca oamenii să scrie, fiind deci imposibil de datat acest început.</p>
+	  <p>Limba română s-a născut din limba daco-tracă a băștinașilor din Dacia și limba latină și a început în perioada războaielor cu Imperiul Roman din anii 101-102  respectiv 105-106. Timp de secole, alte limbi ale populațiilor din jurul acestui teritoriu au influențat deja formata limbă română, cele mai importante fiind slavona, greaca și limba turcă.</p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-yellow" id="2">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="istorie"></i>&nbsp;Istorie si personalitati istorice</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Istoria este știința care studiază evoluția societății omenești din trecut până în prezent. Obiectul istoriei nu se limitează doar la evenimentele politice, cum ar fi de exemplu bătăliile sau faptele conducatorilor. El cuprinde și aspectele economice, sociale și culturale (uneltele, ocupațiile și organizarea oamenilor, creațiile artistice și credințele religioase, viața de zi cu zi etc.).</p>
+	  <p>Istoria este o relatare, o construcție a unei imagini a trecutului făcută de oameni care încearcă să descrie, să explice sau să facă perceptibile timpurile care s-au scurs. Indiferent de epoci sau de metode și oricare ar fi scopul subiacent al muncii istoricului, istoria este întotdeauna o construcție umană, înscrisă în epoca în care este scrisă.</p>
+	  <p>Prin istoria României se înțelege, în mod convențional, istoria regiunii geografice românești precum și a popoarelor care au locuit-o și care, pe lângă diferențele culturale specifice și transformările politice, au dotat-o cu o identitate specifică, identitate care în timp a condus la recunoașterea României drept subiect istoric de sine stătător. </p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-purple" id="3">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="informatica"></i>&nbsp;Informatica si tehnologia informatiei si a comunicarilor</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Termenul informatică desemnează știința procesării sistematice a informației, în special a procesării cu ajutorul calculatoarelor. Istoric, informatica s-a dezvoltat ca știință din matematică, în timp ce dezvoltarea primelor calculatoare își are originea în electrotehnică și telecomunicații. De aceea, calculatorul reprezintă doar dispozitivul pe care sunt implementate conceptele teoretice.</p>
+	  <p>În prezent, informatica își găsește aplicații în toate domeniile vieții. Prezența ei este puternic amplificată de impactul pe care îl are Internetul. Rețeaua la nivel mondial a revoluționat comunicarea dintre companii, logistica, mass-media, dar și viața privată a fiecărui individ.</p>
+	  <p>Tehnologia informației  și/sau Tehnologia informației și a comunicațiilor, abreviat (cel mai adesea IT) TI respectiv TIC, este tehnologia necesară pentru prelucrarea (procurarea, procesarea, stocarea, convertirea și transmiterea) informației, în particular prin folosirea computerelor (calculatoarelor electronice).</p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-blue" id="4">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="geografie"></i>&nbsp;Geografie</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Geografia este știința care studiază relieful, terenurile, trăsăturile, locuitorii și fenomenele Pământului. Prima persoană care a folosit cuvântul <q>geografie</q> a fost Eratosthenes (276—194 î.Hr.). </p>
+	  <p>Patru direcții tradiționale ale cercetării în domeniul geografiei sunt analiza spațială a fenomenelor naturale și umane (geografia ca un studiu al distribuției), studiul fizic (al locurilor și regiunilor), studiul relației dintre om și uscat și cercetarea în domeniul științelor Pământului. Cu toate acestea, geografia modernă este o disciplină cuprinzătoare care încearcă să înțeleagă Pământul cu toate complexitățile sale naturale și artificiale — nu doar unde sunt obiectele, dar și cum au fost create și cum vor fi. </p>
+	  <p>Fiind situată la limita peninsulei Balcanice și acoperind o suprafață eliptică, de 238.391 km², România ocupă mare parte din bazinul inferior al Dunării și regiunile din estul bazinului de mijloc al acestui fluviu. Se află atât la sudul, cât și la nordul Munților Carpați, care formează bariera naturală între bazinele Dunării. Varietatea, concentritatea și proporționalitatea reliefului, altitudinea medie 330 metri, altitudinea maximă 2544 metri fiind în Munții Făgaraș.</p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-green" id="5">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="filme"></i>&nbsp;Filme si personalitati cinematografice</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Film este termenul utilizat pentru desemnarea, în accepțiune mai largă, a produsului final al artei și industriei cinematografice.</p>
+	  <p>Arta și industria cinematografică în vorbirea curentă sunt cunoscute sub denumirea de cinematografie. La rândul ei industria cinematografică se împarte în două sectoare distincte: producția de film și difuzarea lor în săli de cinematograf sau televiziuni, blu-ray, DVD-uri sau descărcându-l de pe internet.</p>
+	  <p>În loc de motto:</p>
+	  <p><q>Când oamenii n-au mai avut curajul să creadă în viața de jos, când n-au mai avut candoarea să creadă în viața de sus, au început să creadă în viața ca-n filme.
+Starul a fost întruchiparea unui eden intermediar, unde Eva poartă bikini, merii cresc în piscine, iar șarpele își petrece vacanța pe un iaht personal.
+Bine sau rău - așa a fost.
+Pentru o bună parte a lumii, filmul a fost întradevăr o uzină care produce vise, conserve de vise. La început, vise sepia. Pe urmă tehnicolore, iar spre dimineață, înainte de ora trezirii - coșmaruri...</q>(Ecaterina Oproiu - critic de film)
+</p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-orange" id="6">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="univers"></i>&nbsp;Universul si Sistemul nostru Solar</h1>
+      <div class="panel__block"></div>
+      <p></p>
+	  <p>Universul reprezintă lumea în totalitatea ei, probabil că nemărginită în timp și spațiu, infinit de variată în ceea ce privește formele pe care le iau materia, energia și informația în procesul dezvoltării lor perpetue.</p>
+	  <p>Astronomii au calculat că universul s-a format cu 13.798 ± 0.037 miliarde de ani în urmă. Teoria Big Bang-ului (<q>marea explozie</q>) explică în mare parte formarea universului, pe care o aseamănă cu o explozie de proporții. Din momentul formării universului a avut loc o expansiune a acestuia care are loc și astăzi.</p>
+	  <p>Sistemul solar (scris și Sistemul Solar) este format din Soare împreună cu sistemul său planetar (care cuprinde opt planete împreună cu sateliții lor naturali) și alte obiecte non-stelare. Sistemul este situat într-unul dintre brațele exterioare ale galaxiei Calea Lactee (mai precis în Brațul Orion), galaxie care are cca. 200 de miliarde de stele. El s-a format acum 4,6 miliarde de ani, ca urmare a colapsului gravitațional al unui gigant nor molecular.</p>
+    </div>
+  </article>
+</section>
+
+<section class="panel b-light-green" id="7">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+	  <a href="#8" class="nav__link c-light-green"><h1 class="panel__headline"><i class="test"></i>&nbsp;<center>Incepe testul</center></h1><i class="test"></i></a>
+      <div class="panel__block"></div>
+      <p></p>
+	  
+    </div>
+  </article>
+</section>
+
+<section class="panel b-light-green" id="8">
+  <article class="panel__wrapper">
+    <div class="panel__content">
+      <h1 class="panel__headline"><i class="test"></i>&nbsp;</h1>
+      <div class="panel__block"></div>
+      <h1>Raspundeti la urmatoarele intrebari: </h1>
+<img src="" id="Pic" height="200" width="250">
+
+<p id="des"></p>
+<label><input type="radio" name="ans" id="ans" value="1"> <font size="5"><b id="rasp1"</b></font><br> </label>
+<label><input type="radio" name="ans" id="ans" value="2"> <font size="5"><b id="rasp2"</b></font><br> </label>
+<label><input type="radio" name="ans" id="ans" value="3"> <font size="5"><b id="rasp3"</b></font><br> </label>
+<label><input type="radio" name="ans" id="ans" value="4"> <font size="5"><b id="rasp4"</b></font><br><br> </label>
+<button id="btn" onclick="NextQuestion()"> Următoarea întrebare </button>
+	  
+    </div>
+  </article>
+</section>
+
+
+<a href="https://www.facebook.com/merisan.ligiaandreea" class="logo" target="_blank"> 
+ <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> <!adresa imaginii>
+</a>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> <!miscarea imaginii>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
+
